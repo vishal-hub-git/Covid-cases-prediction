@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
 ds1=pd.read_excel("series.xlsx")
 ds1["April"].fillna((ds1["May"]-0)//2,inplace=True)
 ds1["May"].fillna(ds1["June"]-ds1["April"],inplace=True)
